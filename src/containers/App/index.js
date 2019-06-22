@@ -5,6 +5,7 @@ import styled, {
 import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import GlobalStyles from "shared/styles/globalStyles";
+import "circular-std";
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -17,7 +18,7 @@ const AppContainer = styled.div`
 const customTheme = createMuiTheme({
   typography: {
     fontFamily: [
-      "Product Sans Regular",
+      "CircularStd",
       "Lato",
       "-apple-system",
       "BlinkMacSystemFont",
