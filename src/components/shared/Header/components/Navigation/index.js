@@ -3,16 +3,14 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { HeaderNav } from "./style";
 
-function Navigation() {
-  const [value, setValue] = React.useState(0);
-
+function Navigation(props) {
   function handleChange(event, newValue) {
-    setValue(newValue);
+    props.handleTabRoutes(newValue);
   }
 
   return (
     <HeaderNav>
-      <Tabs value={value} onChange={handleChange}>
+      <Tabs value={props.tabIndex} onChange={handleChange}>
         <Tab label="About" />
         <Tab label="Projects" />
         <Tab label="Contact" />

@@ -30,7 +30,10 @@ export default function Header(props) {
         <Toolbar>
           <Typography variant="h3">VM.</Typography>
           <div style={{ width: "fit-content", display: "flex" }}>
-            <Navigation />
+            <Navigation
+              tabIndex={props.tabIndex}
+              handleTabRoutes={props.handleTabRoutes}
+            />
             <IconButton
               color="primary"
               aria-label="Change theme"
