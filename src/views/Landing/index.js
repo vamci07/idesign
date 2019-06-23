@@ -24,12 +24,11 @@ export default function Landing(props) {
           maxWidth="xl"
           style={{
             height: "100vh",
-            width: "100vw",
             padding: 0,
             margin: 0
           }}
         >
-          <div style={{ height: "96px" }}>
+          <div style={{ height: "560px" }}>
             <Header
               handleThemeChange={props.handleThemeChange}
               trueLight={props.trueLight}
@@ -37,10 +36,10 @@ export default function Landing(props) {
               handleTabRoutes={handleTabRoutes}
             />
           </div>
-          <div style={{ height: "calc(100% - 152px", padding: "16px 56px" }}>
-            {tabIndex === 0 && <About />}
-            {tabIndex === 1 && <Projects />}
-            {tabIndex === 2 && <Contact />}
+          <div style={{ padding: "16px 56px" }}>
+            <About />
+            <Projects />
+            <Contact />
           </div>
           <Footer />
         </Container>

@@ -8,7 +8,8 @@ export default createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: auto;   
+    overflow: auto;  
+    background-image: linear-gradient( 135deg, #FFE985 10%, #FA742B 100%);
 }
   
   code {
