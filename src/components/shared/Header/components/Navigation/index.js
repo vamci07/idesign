@@ -1,8 +1,7 @@
 import React from "react";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { ThemeProvider } from "@material-ui/styles";
-import { HeaderNav, tabsTheme } from "./style";
+import { HeaderNav } from "./style";
 
 function Navigation() {
   const [value, setValue] = React.useState(0);
@@ -13,13 +12,11 @@ function Navigation() {
 
   return (
     <HeaderNav>
-      <ThemeProvider theme={tabsTheme}>
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="About" />
-          <Tab label="Projects" />
-          <Tab label="Contact" />
-        </Tabs>
-      </ThemeProvider>
+      <Tabs value={value} onChange={handleChange}>
+        <Tab label="About" />
+        <Tab label="Projects" />
+        <Tab label="Contact" />
+      </Tabs>
     </HeaderNav>
   );
 }

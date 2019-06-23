@@ -1,10 +1,10 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import { blueGrey, green } from "@material-ui/core/colors";
 
 export const lightTheme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: [
-      "CircularStd",
       "Lato",
       "-apple-system",
       "BlinkMacSystemFont",
@@ -19,6 +19,12 @@ export const lightTheme = createMuiTheme({
     ].join(",")
   },
   palette: {
+    primary: {
+      main: blueGrey[500]
+    },
+    secondary: {
+      main: green[500]
+    },
     type: "light"
   }
 });
@@ -27,7 +33,6 @@ export const darkTheme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: [
-      "CircularStd",
       "Lato",
       "-apple-system",
       "BlinkMacSystemFont",
@@ -42,6 +47,12 @@ export const darkTheme = createMuiTheme({
     ].join(",")
   },
   palette: {
+    primary: {
+      main: blueGrey[500]
+    },
+    secondary: {
+      main: green[500]
+    },
     type: "dark"
   }
 });
