@@ -1,47 +1,20 @@
 import React from "react";
-import styled, {
-  ThemeProvider as StyledThemeProvider
-} from "styled-components";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { ThemeProvider } from "@material-ui/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
 import GlobalStyles from "shared/styles/globalStyles";
+import myTheme from "shared/styles/myTheme";
 import "circular-std";
 
-const AppContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const customTheme = createMuiTheme({
-  typography: {
-    fontFamily: [
-      "CircularStd",
-      "Lato",
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
-    ].join(",")
-  },
-  overrides: {}
-});
+import Landing from "views/Landing";
 
 function App() {
+  console.log(myTheme);
   return (
-    <ThemeProvider theme={customTheme}>
-      <StyledThemeProvider theme={customTheme}>
+    <ThemeProvider theme={myTheme}>
+      <StyledThemeProvider theme={myTheme}>
         <>
           <GlobalStyles />
-          <AppContainer>Hello</AppContainer>
+          <Landing />
         </>
       </StyledThemeProvider>
     </ThemeProvider>
