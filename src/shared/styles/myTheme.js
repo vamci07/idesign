@@ -1,5 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import { blueGrey, green } from "@material-ui/core/colors";
+import { blueGrey, green, red } from "@material-ui/core/colors";
 
 export const lightTheme = createMuiTheme({
   typography: {
@@ -23,7 +23,7 @@ export const lightTheme = createMuiTheme({
       main: blueGrey[500]
     },
     secondary: {
-      main: green[500]
+      main: red[500]
     },
     type: "light"
   }

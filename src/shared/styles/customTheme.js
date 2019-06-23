@@ -24,6 +24,10 @@ export const customTheme = theme =>
         h3: {
           fontFamily: "Bungee Inline",
           color: theme.palette.text.primary
+        },
+        subtitle1: {
+          fontFamily: "Bungee",
+          color: theme.palette.text.secondary
         }
       },
       MuiPaper: {

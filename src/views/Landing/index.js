@@ -7,19 +7,27 @@ import { customTheme } from "shared/styles/customTheme";
 import About from "views/About";
 import Projects from "views/Projects";
 import Contact from "views/Contact";
+import Footer from "components/shared/Footer";
 
 export default function Landing(props) {
   const [tabIndex, setTabIndex] = useState(0);
   function handleTabRoutes(selectedTabIndex) {
     setTabIndex(selectedTabIndex);
   }
+
+  console.log(customTheme(props.theme));
   return (
-    <>
-      <CssBaseline />
-      <ThemeProvider theme={customTheme(props.theme)}>
+    <ThemeProvider theme={customTheme(props.theme)}>
+      <>
+        <CssBaseline />
         <Container
           maxWidth="xl"
-          style={{ height: "100vh", width: "100vw", padding: 0, margin: 0 }}
+          style={{
+            height: "100vh",
+            width: "100vw",
+            padding: 0,
+            margin: 0
+          }}
         >
           <div style={{ height: "96px" }}>
             <Header
@@ -29,13 +37,14 @@ export default function Landing(props) {
               handleTabRoutes={handleTabRoutes}
             />
           </div>
-          <div style={{ height: "calc(100% - 96px", padding: "16px 56px" }}>
+          <div style={{ height: "calc(100% - 152px", padding: "16px 56px" }}>
             {tabIndex === 0 && <About />}
             {tabIndex === 1 && <Projects />}
             {tabIndex === 2 && <Contact />}
           </div>
+          <Footer />
         </Container>
-      </ThemeProvider>
-    </>
+      </>
+    </ThemeProvider>
   );
 }

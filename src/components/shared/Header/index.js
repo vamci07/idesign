@@ -28,7 +28,9 @@ export default function Header(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h3">VM.</Typography>
+          <Typography variant="h3" style={{ fontFamily: "Montez" }}>
+            R . designs
+          </Typography>
           <div style={{ width: "fit-content", display: "flex" }}>
             <Navigation
               tabIndex={props.tabIndex}
