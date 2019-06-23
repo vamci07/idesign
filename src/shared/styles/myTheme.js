@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-const myTheme = createMuiTheme({
+export const lightTheme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: [
@@ -18,7 +18,32 @@ const myTheme = createMuiTheme({
       '"Segoe UI Symbol"'
     ].join(",")
   },
-  palette: {}
+  palette: {
+    type: "light"
+  }
 });
 
-export default myTheme;
+export const darkTheme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+    fontFamily: [
+      "CircularStd",
+      "Lato",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"'
+    ].join(",")
+  },
+  palette: {
+    type: "dark"
+  }
+});
+
+export default { lightTheme, darkTheme };

@@ -2,16 +2,16 @@ import React from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { ThemeProvider } from "@material-ui/styles";
 import GlobalStyles from "shared/styles/globalStyles";
-import myTheme from "shared/styles/myTheme";
+import { lightTheme, darkTheme } from "shared/styles/myTheme";
 import "circular-std";
 
 import Landing from "views/Landing";
 
 function App() {
-  console.log(myTheme);
+  console.log(darkTheme);
   return (
-    <ThemeProvider theme={myTheme}>
-      <StyledThemeProvider theme={myTheme}>
+    <ThemeProvider theme={darkTheme} type="dark">
+      <StyledThemeProvider theme={darkTheme}>
         <>
           <GlobalStyles />
           <Landing />

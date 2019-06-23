@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { createMuiTheme } from "@material-ui/core/styles";
 
 export const HeaderNav = styled.div`
   font-size: 1rem;
@@ -7,46 +8,42 @@ export const HeaderNav = styled.div`
   z-index: 100;
   top: 0;
   height: 48px;
+`;
 
-  ul,
-  li,
-  a {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  li {
-    display: inline-block;
-    margin: 0 16px;
-    padding-top: 16px;
-    position: relative;
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    :hover {
-      color: #fff;
-      :before {
-        width: 100%;
+export const tabsTheme = theme =>
+  createMuiTheme({
+    typography: {
+      useNextVariants: true,
+      fontFamily: [
+        "CircularStd",
+        "Lato",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"'
+      ].join(",")
+    },
+    overrides: {
+      MuiTabs: {
+        indicator: {
+          height: "4px",
+          backgroundColor: theme.palette.primary.main,
+          borderRadius: "8px"
+        }
+      },
+      MuiTab: {
+        root: {
+          [theme.breakpoints.down("lg")]: {
+            width: "120px",
+            minWidth: "120px"
+          }
+        }
       }
     }
-    :before {
-      content: "";
-      display: block;
-      height: 4px;
-      background-color: #fff;
-      position: absolute;
-      top: 0;
-      width: 0%;
-      transition: all ease-in-out 250ms;
-    }
-  }
-`;
+  });
